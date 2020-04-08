@@ -1,0 +1,13 @@
+PROGRAMMING AND SCRIPTING PROJECT
+
+FISHER'S IRIS DATA SET
+
+to-do list:
+
+07/04/2020
+Iris.csv file downloaded and added to the project
+
+Data set online research:
+
+The iris data set consists of 50 samples of each of three types of iris flowers (setosa, versicolor and virginica) – 150 in total. 
+For each of the type the following measurements were taken – sepal length, sepal width, petal length and petal width, that is four measurements in total.
