@@ -7,8 +7,64 @@ Data set online research:
 The Iris flower data set or Fisher's Iris data set is a multivariate data set introduced by the British statistician and biologist Ronald Fisher in his 1936 paper "The use of multiple measurements in taxonomic problems".
 Based on Fisher's linear discriminant model, the data set became a typical test case for many statistical classification techniques in machine learning such as support vector machines.
 
-The set consists of measurements, in centimetres, of 50 samples of each of three types of iris flowers (setosa, versicolor and virginica) – 150 in total. 
-For each of the type the following measurements were taken – sepal length, sepal width, petal length and petal width, that is four measurements in total.
+The set consists of measurements, in centimetres, of 50 samples of each of three types of iris flowers (setosa, versicolor and virginica) â€“ 150 in total. 
+For each of the type four measurements were taken â€“ sepal length, sepal width, petal length and petal width.
 
 https://en.wikipedia.org/wiki/Iris_flower_data_set
 https://wikimili.com/en/Iris_flower_data_set
+
+
+The Iris Dataset is saved into a CSV file (Comma Separated Value file).
+The following Python libraries are essential and are to be imported to be able to make the necessary program run (https://web.microsoftstream.com/video/025ef713-d7c8-492f-97f4-5590015da029?referrer=https:%2F%2Flearnonline.gmit.ie%2Fcourse%2Fview.php%3Fid%3D1598):
+
+Pandas 
+Matplotlib
+Seaborn
+
+
+Pandas is an open-source Python Library providing high-performance data manipulation and analysis tool using its powerful data structures. The name Pandas is derived from the word Panel Data â€“ an Econometrics from Multidimensional data.
+Python with Pandas is used in a wide range of fields including academic and commercial domains including finance, economics, Statistics, analytics, etc.
+
+import pandas as pd                           #This first line imports the Pandas module
+from pandas import DataFrame, read_csv        #The read_csv method loads the data in a Pandas dataframe that we will name df.
+df = pd.read_csv(file)
+Reference: https://pythonspot.com/pandas-read-csv/
+
+
+Matplotlib
+matplotlib.pyplot is a rich collection of command style functions. Certain pyplot functions will help us make some change to a figure: e.g., creates a figure, creates a plotting area in a figure, plots some lines in a plotting area, decorates the plot with labels, title, type of plot (for example, histogram or scatter) etc
+plt.show() command displays all figures.
+
+import matplotlib.pyplot as plt              #This first line imports Matplotlib library
+Reference: https://matplotlib.org/3.2.0/tutorials/introductory/pyplot.html
+
+
+Seaborn
+Seaborn is a library for making statistical graphics in Python. It is built on top of matplotlib and closely integrated with pandas data structures.
+
+Here is some of the functionality that seaborn offers:
+
+A dataset-oriented API for examining relationships between multiple variables
+
+Specialized support for using categorical variables to show observations or aggregate statistics
+
+Options for visualizing univariate or bivariate distributions and for comparing them between subsets of data
+
+Automatic estimation and plotting of linear regression models for different kinds dependent variables
+
+Convenient views onto the overall structure of complex datasets
+
+High-level abstractions for structuring multi-plot grids that let you easily build complex visualizations
+
+Concise control over matplotlib figure styling with several built-in themes
+
+Tools for choosing color palettes that faithfully reveal patterns in your data
+
+Seaborn aims to make visualization a central part of exploring and understanding data. Its dataset-oriented plotting functions operate on dataframes and arrays containing whole datasets and internally perform the necessary semantic mapping and statistical aggregation to produce informative plots.
+Reference: https://seaborn.pydata.org/introduction.html
+
+Seaborn.pairplot function
+seaborn.pairplot(data, hue=None, hue_order=None, palette=None, vars=None, x_vars=None, y_vars=None, kind='scatter', diag_kind='auto', markers=None, height=2.5, aspect=1, corner=False, dropna=True, plot_kws=None, diag_kws=None, grid_kws=None, size=None)
+Plot pairwise relationships in a dataset.
+https://seaborn.pydata.org/generated/seaborn.pairplot.html
+
