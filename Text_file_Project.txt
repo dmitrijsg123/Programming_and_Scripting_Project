@@ -1,8 +1,7 @@
-PROGRAMMING AND SCRIPTING PROJECT
+PROGRAMMING AND SCRIPTING PROJECT - WORKING DIARY
 
 FISHER'S IRIS DATA SET
 
-to-do list:
 
 07/04/2020
 Iris.csv file downloaded and added to the project
@@ -42,8 +41,11 @@ Python with Pandas is used in a wide range of fields including academic and comm
 
 import pandas as pd                           #This first line imports the Pandas module
 from pandas import DataFrame, read_csv        #The read_csv method loads the data in a Pandas dataframe that we will name df.
-df = pd.read_csv(file)
-Reference: https://pythonspot.com/pandas-read-csv/
+df = pd.read_csv(filename)			# Opens, analyzes, and reads the CSV file provided, and stores the data in a DataFrame.
+References: https://pythonspot.com/pandas-read-csv/
+            https://realpython.com/python-csv/
+
+
 
 
 Matplotlib
@@ -57,7 +59,7 @@ Reference: https://matplotlib.org/3.2.0/tutorials/introductory/pyplot.html
 Seaborn
 Seaborn is a library for making statistical graphics in Python. It is built on top of matplotlib and closely integrated with pandas data structures.
 
-Here is some of the functionality that seaborn offers:
+Some of the functionality that seaborn offers is:
 
 A dataset-oriented API for examining relationships between multiple variables
 
@@ -82,3 +84,82 @@ Seaborn.pairplot function
 seaborn.pairplot(data, hue=None, hue_order=None, palette=None, vars=None, x_vars=None, y_vars=None, kind='scatter', diag_kind='auto', markers=None, height=2.5, aspect=1, corner=False, dropna=True, plot_kws=None, diag_kws=None, grid_kws=None, size=None)
 Plot pairwise relationships in a dataset.
 https://seaborn.pydata.org/generated/seaborn.pairplot.html
+
+12/04/2020
+Values that we need to output -
+
+Minumum value of Iris Setosa:
+Sepal length
+Sepal width
+Petal length
+Petal width
+
+Maximum value of Iris Setosa:
+Sepal length
+Sepal width
+Petal length
+Petal width
+
+Average value of Iris Setosa:
+Sepal length
+Sepal width
+Petal length
+Petal width
+
+Minumum value of Iris Virginica:
+Sepal length
+Sepal width
+Petal length
+Petal width
+
+Maximum value of Iris Virginica:
+Sepal length
+Sepal width
+Petal length
+Petal width
+
+Average value of Iris Virginica:
+Sepal length
+Sepal width
+Petal length
+Petal width
+
+Minumum value of Iris Versicolor:
+Sepal length
+Sepal width
+Petal length
+Petal width
+
+Maximum value of Iris Versicolor:
+Sepal length
+Sepal width
+Petal length
+Petal width
+
+Average value of Iris Versicolor:
+Sepal length
+Sepal width
+Petal length
+Petal width
+
+Start of work on Program - 
+
+
+#Pandas have inbuilt functions such as Sum,Max,Min,AVG etc.
+
+import pandas as pd
+
+df=pd.read_csv('Iris.csv')
+
+
+#FINDING MAX AND MIN
+p=df['Sepal_length'].max()
+q=df['Sepal_length'].min()
+r = df['Sepal_length'].mean()
+s = df['Sepal_length'].describe()
+
+
+print('Maximum sepal length of all Iris species is ', p)
+print('Minimum sepal length of all Iris species is ', q)
+print('Average sepal length of all Iris species is ', r)
+print(s)
