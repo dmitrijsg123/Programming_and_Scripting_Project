@@ -27,9 +27,9 @@ Python with Pandas is used in a wide range of fields including academic and comm
 
 import pandas as pd                           #This first line imports the Pandas module
 from pandas import DataFrame, read_csv        #The read_csv method loads the data in a Pandas dataframe that we will name df.
-df = pd.read_csv(file)
-Reference: https://pythonspot.com/pandas-read-csv/
-
+df = pd.read_csv(filename)                    ## Opens, analyzes, and reads the CSV file provided, and stores the data in a DataFrame.
+References: https://pythonspot.com/pandas-read-csv/
+	   https://realpython.com/python-csv/
 
 Matplotlib
 matplotlib.pyplot is a rich collection of command style functions. Certain pyplot functions will help us make some change to a figure: e.g., creates a figure, creates a plotting area in a figure, plots some lines in a plotting area, decorates the plot with labels, title, type of plot (for example, histogram or scatter) etc
