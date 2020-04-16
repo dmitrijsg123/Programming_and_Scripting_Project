@@ -1,0 +1,121 @@
+
+Maximum sepal length of all Iris species is  7.9
+Minimum sepal length of all Iris species is  4.3
+Average sepal length of all Iris species is  5.8
+Some more detailed summarized information: count    150.0
+mean       5.8
+std        0.8
+min        4.3
+25%        5.1
+50%        5.8
+75%        6.4
+max        7.9
+Name: Sepal_length, dtype: float64
+
+Maximum sepal width of all Iris species is  4.4
+Minimum sepal width of all Iris species is  2.0
+Average sepal width of all Iris species is  3.1
+Some more detailed summarized information: count    150.0
+mean       3.1
+std        0.4
+min        2.0
+25%        2.8
+50%        3.0
+75%        3.3
+max        4.4
+Name: Sepal_width, dtype: float64
+
+Maximum petal length of all Iris species is  6.9
+Minimum petal length of all Iris species is  1.0
+Average petal length of all Iris species is  3.8
+Some more detailed summarized information: count    150.0
+mean       3.8
+std        1.8
+min        1.0
+25%        1.6
+50%        4.4
+75%        5.1
+max        6.9
+Name: Petal_length, dtype: float64
+
+Maximum petal width of all Iris species is  2.5
+Minimum petal width of all Iris species is  0.1
+Average petal width of all Iris species is  1.2
+Some more detailed summarized information: count    150.0
+mean       1.2
+std        0.8
+min        0.1
+25%        0.3
+50%        1.3
+75%        1.8
+max        2.5
+Name: Petal_width, dtype: float64
+
+Maximum values for Iris Setosa flowers are: 
+Sepal_length       5.8
+Sepal_width        4.4
+Petal_length       1.9
+Petal_width        0.6
+Species         setosa
+dtype: object
+
+Maximum values for Iris Versicolor flowers are: 
+Sepal_length             7
+Sepal_width            3.4
+Petal_length           5.1
+Petal_width            1.8
+Species         versicolor
+dtype: object
+
+Maximum values for Iris Virginica flowers are: 
+Sepal_length          7.9
+Sepal_width           3.8
+Petal_length          6.9
+Petal_width           2.5
+Species         virginica
+dtype: object
+
+Minimum values for Iris Setosa flowers are: 
+Sepal_length       4.3
+Sepal_width        2.3
+Petal_length         1
+Petal_width        0.1
+Species         setosa
+dtype: object
+
+Minimum values for Iris Versicolor flowers are: 
+Sepal_length           4.9
+Sepal_width              2
+Petal_length             3
+Petal_width              1
+Species         versicolor
+dtype: object
+
+Minimum values for Iris Virginica flowers are: 
+Sepal_length          4.9
+Sepal_width           2.2
+Petal_length          4.5
+Petal_width           1.4
+Species         virginica
+dtype: object
+
+Average values for Iris Setosa flowers are: 
+Sepal_length    5.01
+Sepal_width     3.42
+Petal_length    1.46
+Petal_width     0.24
+dtype: float64
+
+Average values for Iris Versicolor flowers are: 
+Sepal_length    5.94
+Sepal_width     2.77
+Petal_length    4.26
+Petal_width     1.33
+dtype: float64
+
+Average values for Iris Virginica flowers are: 
+Sepal_length    6.59
+Sepal_width     2.97
+Petal_length    5.55
+Petal_width     2.03
+dtype: float64
