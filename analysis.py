@@ -18,7 +18,8 @@ description = df['Sepal_length'].describe()
 print('\nMaximum sepal length of all Iris species is ', maximum, file=open(output_textfile,"a"))                    # \n - new line reference: https://wtmatter.com/python-new-line/
 print('Minimum sepal length of all Iris species is ', minimum, file=open(output_textfile,"a"))
 print('Average sepal length of all Iris species is ', round(average,1), file=open(output_textfile,"a"))                 # rounding to 1 decimal function - round(my_float,1)  reference:  https://tutorialdeep.com/knowhow/round-float-to-2-decimal-places-python/
-print('Some more detailed summarized information:', round(description,1), file=open(output_textfile,"a"))
+print('Some more detailed summarized information:', file=open(output_textfile,"a"))
+print(round(description,1), file=open(output_textfile,"a"))
 
 #FINDING SEPAL WIDTH VALUES FOR ALL IRIS TYPES - MAX, MIN, MEAN AS WELL AS MORE DETAILED INFO WITH DESCRIBE FUNCTION
 maximum = df['Sepal_width'].max()
@@ -30,7 +31,8 @@ description = df['Sepal_width'].describe()
 print('\nMaximum sepal width of all Iris species is ', maximum, file=open(output_textfile,"a"))
 print('Minimum sepal width of all Iris species is ', minimum, file=open(output_textfile,"a"))
 print('Average sepal width of all Iris species is ', round(average,1), file=open(output_textfile,"a"))
-print('Some more detailed summarized information:', round(description,1), file=open(output_textfile,"a"))
+print('Some more detailed summarized information:', file=open(output_textfile,"a"))
+print(round(description,1), file=open(output_textfile,"a"))
 
 #FINDING PETAL LENGTH VALUES FOR ALL IRIS TYPES - MAX, MIN, MEAN AS WELL AS MORE DETAILED INFO WITH DESCRIBE FUNCTION
 maximum = df['Petal_length'].max()
@@ -42,7 +44,8 @@ description = df['Petal_length'].describe()
 print('\nMaximum petal length of all Iris species is ', maximum, file=open(output_textfile,"a"))
 print('Minimum petal length of all Iris species is ', minimum, file=open(output_textfile,"a"))
 print('Average petal length of all Iris species is ', round(average,1), file=open(output_textfile,"a"))
-print('Some more detailed summarized information:', round(description,1), file=open(output_textfile,"a"))
+print('Some more detailed summarized information:', file=open(output_textfile,"a"))
+print(round(description,1), file=open(output_textfile,"a"))
 
 #FINDING PETAL WIDTH VALUES FOR ALL IRIS TYPES - MAX, MIN, MEAN AS WELL AS MORE DETAILED INFO WITH DESCRIBE FUNCTION
 maximum = df['Petal_width'].max()
@@ -53,7 +56,8 @@ description = df['Petal_width'].describe()
 print('\nMaximum petal width of all Iris species is ', maximum, file=open(output_textfile,"a"))
 print('Minimum petal width of all Iris species is ', minimum, file=open(output_textfile,"a"))
 print('Average petal width of all Iris species is ', round(average,1), file=open(output_textfile,"a"))
-print('Some more detailed summarized information:', round(description,1), file=open(output_textfile,"a"))
+print('Some more detailed summarized information:', file=open(output_textfile,"a"))
+print(round(description,1), file=open(output_textfile,"a"))
 
 #....................................................................................................................
 
@@ -115,4 +119,51 @@ Virginica_average = df[df.Species=='virginica']
 print('\nAverage values for Iris Virginica flowers are: ', file=open(output_textfile,"a"))
 print(round(Virginica_average.mean(),2), file=open(output_textfile,"a"))
 
+
+# SCATTERPLOTS
+# References https://www.youtube.com/watch?v=GcXcSZ0gQps, https://web.microsoftstream.com/video/025ef713-d7c8-492f-97f4-5590015da029?referrer=https:%2F%2Flearnonline.gmit.ie%2Fcourse%2Fview.php%3Fid%3D1598
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+
+df = pd.read_csv("Iris.csv")
+sns.set(style = 'whitegrid')                                                         # color of the background grid
+sns.scatterplot(x = 'Sepal_length', y = 'Sepal_width', data = df,hue = 'Species')
+plt.title('Comparison of sepal length against sepal width')
+plt.show()
+
+
+df = pd.read_csv("Iris.csv")
+sns.set(style = 'whitegrid')                                                         # color of the background grid
+sns.scatterplot(x = 'Petal_length', y = 'Petal_width', data = df,hue = 'Species')
+plt.title('Comparison of petal length against petal width')
+plt.show()
+
+df = pd.read_csv("Iris.csv")
+sns.set(style = 'whitegrid')                                                         # color of the background grid
+sns.scatterplot(x = 'Sepal_length', y = 'Petal_length', data = df,hue = 'Species')
+plt.title('Comparison of sepal length against petal length')
+plt.show()
+
+df = pd.read_csv("Iris.csv")
+sns.set(style = 'whitegrid')                                                         # color of the background grid
+sns.scatterplot(x = 'Sepal_length', y = 'Petal_width', data = df,hue = 'Species')
+plt.title('Comparison of sepal length against petal width')
+plt.show()
+
+df = pd.read_csv("Iris.csv")
+sns.set(style = 'whitegrid')                                                         # color of the background grid
+sns.scatterplot(x = 'Sepal_width', y = 'Petal_length', data = df,hue = 'Species')
+plt.title('Comparison of sepal width against petal length')
+plt.show()
+
+df = pd.read_csv("Iris.csv")
+sns.set(style = 'whitegrid')                                                         # color of the background grid
+sns.scatterplot(x = 'Sepal_width', y = 'Petal_width', data = df,hue = 'Species')
+plt.title('Comparison of sepal width against Petal width')
+plt.show()
+
+sns.pairplot(df, hue  ='Species')
+plt.show()
 
