@@ -146,3 +146,65 @@ print('\nMaximum sepal length of all Iris species is ', maximum, file=open(outpu
 print('Average sepal length of all Iris species is ', round(average,1), file=open(output_textfile,"a"))  # rounding to 1 decimal function - round(my_float,1)  reference:  https://tutorialdeep.com/knowhow/round-float-to-2-decimal-places-python/  
 
 
+SCATTERPLOTS AND HISTOGRAMS 
+Scatterplots and histograms can be best represented with Seaborn.
+Seaborn is a library for making statistical graphics in Python. It is built on top of matplotlib and closely integrated with pandas data structures.
+ It has options for visualizing univariate or bivariate distributions and for comparing them between subsets of data.
+Scatterplots represent joint relationships, but histograms - univariate distributions.
+Behind the scenes, seaborn uses matplotlib to draw plots. Many tasks can be accomplished with only seaborn functions, but further customization might require using matplotlib directly.
+
+To run Seaborn and matplotlib in Python:
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+--------------------------------------------------------------
+
+Scatterplot
+
+# References https://www.youtube.com/watch?v=GcXcSZ0gQps, https://web.microsoftstream.com/video/025ef713-d7c8-492f-97f4-5590015da029?referrer=https:%2F%2Flearnonline.gmit.ie%2Fcourse%2Fview.php%3Fid%3D1598
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+
+df = pd.read_csv("Iris.csv")
+sns.set(style = 'whitegrid')                                                         # color of the background grid
+sns.scatterplot(x = 'Sepal_length', y = 'Sepal_width', data = df,hue = 'Species')
+plt.title('Comparison of sepal length against sepal width')
+plt.show()
+
+
+df = pd.read_csv("Iris.csv")
+sns.set(style = 'whitegrid')                                                         # color of the background grid
+sns.scatterplot(x = 'Petal_length', y = 'Petal_width', data = df,hue = 'Species')
+plt.title('Comparison of petal length against petal width')
+plt.show()
+
+df = pd.read_csv("Iris.csv")
+sns.set(style = 'whitegrid')                                                         # color of the background grid
+sns.scatterplot(x = 'Sepal_length', y = 'Petal_length', data = df,hue = 'Species')
+plt.title('Comparison of sepal length against petal length')
+plt.show()
+
+df = pd.read_csv("Iris.csv")
+sns.set(style = 'whitegrid')                                                         # color of the background grid
+sns.scatterplot(x = 'Sepal_length', y = 'Petal_width', data = df,hue = 'Species')
+plt.title('Comparison of sepal length against petal width')
+plt.show()
+
+df = pd.read_csv("Iris.csv")
+sns.set(style = 'whitegrid')                                                         # color of the background grid
+sns.scatterplot(x = 'Sepal_width', y = 'Petal_length', data = df,hue = 'Species')
+plt.title('Comparison of sepal width against petal length')
+plt.show()
+
+df = pd.read_csv("Iris.csv")
+sns.set(style = 'whitegrid')                                                         # color of the background grid
+sns.scatterplot(x = 'Sepal_width', y = 'Petal_width', data = df,hue = 'Species')
+plt.title('Comparison of sepal width against Petal width')
+plt.show()
+
+Pairplot
+
+sns.pairplot(df, hue  ='Species')
+plt.show()
