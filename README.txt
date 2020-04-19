@@ -14,13 +14,15 @@ https://en.wikipedia.org/wiki/Iris_flower_data_set
 https://wikimili.com/en/Iris_flower_data_set
 
 
+
 The Iris Dataset is saved into a CSV file (Comma Separated Value file).
 The following Python libraries are essential and are to be imported to be able to make the necessary program run (https://web.microsoftstream.com/video/025ef713-d7c8-492f-97f4-5590015da029?referrer=https:%2F%2Flearnonline.gmit.ie%2Fcourse%2Fview.php%3Fid%3D1598):
 
 Pandas 
+
 Matplotlib
+
 Seaborn
-Numpy
 
 
 Pandas is an open-source Python Library providing high-performance data manipulation and analysis tool using its powerful data structures. The name Pandas is derived from the word Panel Data – an Econometrics from Multidimensional data.
@@ -69,143 +71,64 @@ seaborn.pairplot(data, hue=None, hue_order=None, palette=None, vars=None, x_vars
 Plot pairwise relationships in a dataset.
 https://seaborn.pydata.org/generated/seaborn.pairplot.html
 
-CODE FOR SHOWING VARIABLES
+EXAMPLE OF CODE FOR SHOWING VARIABLES
 
 import pandas as pd   #Import pandas library that allows to use its in-built functions, like max(), min(), mean() and describe()
 
 df=pd.read_csv('Iris.csv')     # reads the csv file
 
-
-#FINDING SEPAL LENGTH VALUES FOR ALL IRIS TYPES - MAX, MIN, MEAN AS WELL AS MORE DETAILED INFO WITH DESCRIBE FUNCTION
+#FINDING SEPAL LENGTH VALUES FOR ALL IRIS TYPES - MAXIMUM VALUE
 maximum = df['Sepal_length'].max()
-minimum = df['Sepal_length'].min()
-average = df['Sepal_length'].mean()
-description = df['Sepal_length'].describe()
 
-#FINDING SEPAL WIDTH VALUES FOR ALL IRIS TYPES - MAX, MIN, MEAN AS WELL AS MORE DETAILED INFO WITH DESCRIBE FUNCTION
-maximum = df['Sepal_width'].max()
+
+#FINDING SEPAL WIDTH VALUES FOR ALL IRIS TYPES - MINIMUM VALUE
 minimum = df['Sepal_width'].min()
-average = df['Sepal_width'].mean()
-description = df['Sepal_width'].describe()
 
-#FINDING PETAL LENGTH VALUES FOR ALL IRIS TYPES - MAX, MIN, MEAN AS WELL AS MORE DETAILED INFO WITH DESCRIBE FUNCTION
-maximum = df['Petal_length'].max()
-minimum = df['Petal_length'].min()
+
+#FINDING PETAL LENGTH VALUES FOR ALL IRIS TYPES - AVERAGE VALUE 
 average = df['Petal_length'].mean()
-description = df['Petal_length'].describe()
 
-#FINDING PETAL WIDTH VALUES FOR ALL IRIS TYPES - MAX, MIN, MEAN AS WELL AS MORE DETAILED INFO WITH DESCRIBE FUNCTION
-maximum = df['Petal_width'].max()
-minimum = df['Petal_width'].min()
-average = df['Petal_width'].mean()
+
+#FINDING PETAL WIDTH VALUES FOR ALL IRIS TYPES - DETAILED INFO WITH DESCRIBE FUNCTION
 description = df['Petal_width'].describe()
 
-#Iris Setosa only  - maximums for all four parameters
-import pandas as pd
-
-df=pd.read_csv('Iris.csv')                                                     
-Setosa_maximum = df[df.Species=='setosa']                                   # df[df.Column_Name==''] function allows to narrow down only to the needed rows (reference: https://youtube.com/watch?V=xvpNA7bC8cs)
-
-#Iris Versicolor only  - maximums for all four parameters
-df=pd.read_csv('Iris.csv')                                                   
-Versicolor_maximum = df[df.Species=='versicolor']        
-
-#Iris Virginica only  - maximums for all four parameters
-df=pd.read_csv('Iris.csv')                                                    
-Virginica_maximum = df[df.Species=='virginica']        
-
-
-#Iris Setosa only  - minimums for all four parameters
-df=pd.read_csv('Iris.csv')                                                  
-Setosa_minimum = df[df.Species=='setosa']       
-
-#Iris Versicolor only  - minimums for all four parameters
-df=pd.read_csv('Iris.csv')                    
-Versicolor_minimum = df[df.Species=='versicolor']        
-
-#Iris Virginica only  - minimums for all four parameters
-df=pd.read_csv('Iris.csv')              
-Virginica_minimum = df[df.Species=='virginica']        
-
-#Iris Setosa only  - average values for all four parameters
-
-df=pd.read_csv('Iris.csv')                  
-Setosa_average = df[df.Species=='setosa']       
-
-#Iris Versicolor only  - average values for all four parameters
-Versicolor_average = df[df.Species=='versicolor']        
-print('Average values for Iris Versicolor flowers are: ',Versicolor_average.mean())
+EXAMPLES OF CODE FOR ONE TYPE OF SPECIES ONLY
+(reference: https://youtube.com/watch?V=xvpNA7bC8cs)
+#Iris Setosa only  - maximums for all four parameters                                                     
+Setosa_maximum = df[df.Species=='setosa']                                   
 
 #Iris Virginica only  - average values for all four parameters
 df=pd.read_csv('Iris.csv')                
 Virginica_average = df[df.Species=='virginica']    
 
+
 ---------------------------------------------------------------
 EXAMPLE OF PRINTING VARIABLES INTO A TEXT FILE:
 
-print('\nMaximum sepal length of all Iris species is ', maximum, file=open(output_textfile,"a"))          # \n - new line reference: https://wtmatter.com/python-new-line/  
-print('Average sepal length of all Iris species is ', round(average,1), file=open(output_textfile,"a"))  # rounding to 1 decimal function - round(my_float,1)  reference:  https://tutorialdeep.com/knowhow/round-float-to-2-decimal-places-python/  
+print('\nMaximum sepal length of all Iris species is ', maximum, file=open(output_textfile,"a"))          
+# \n - new line reference: https://wtmatter.com/python-new-line/  
+print('Average sepal length of all Iris species is ', round(average,1), file=open(output_textfile,"a"))  
+# rounding to 1 decimal function - round(my_float,1)  
+reference:  https://tutorialdeep.com/knowhow/round-float-to-2-decimal-places-python/  
 
 
 SCATTERPLOTS AND HISTOGRAMS 
-Scatterplots and histograms can be best represented with Seaborn.
-Seaborn is a library for making statistical graphics in Python. It is built on top of matplotlib and closely integrated with pandas data structures.
- It has options for visualizing univariate or bivariate distributions and for comparing them between subsets of data.
-Scatterplots represent joint relationships, but histograms - univariate distributions.
-Behind the scenes, seaborn uses matplotlib to draw plots. Many tasks can be accomplished with only seaborn functions, but further customization might require using matplotlib directly.
-
-To run Seaborn and matplotlib in Python:
-import matplotlib.pyplot as plt
-import seaborn as sns
-
---------------------------------------------------------------
-
 Scatterplot
 
 # References https://www.youtube.com/watch?v=GcXcSZ0gQps, https://web.microsoftstream.com/video/025ef713-d7c8-492f-97f4-5590015da029?referrer=https:%2F%2Flearnonline.gmit.ie%2Fcourse%2Fview.php%3Fid%3D1598
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-import numpy as np
 
-df = pd.read_csv("Iris.csv")
-sns.set(style = 'whitegrid')                                                         # color of the background grid
+# color of the background grid
+sns.set(style = 'whitegrid')                                                        
+
+# Shows scatterplot
 sns.scatterplot(x = 'Sepal_length', y = 'Sepal_width', data = df,hue = 'Species')
-plt.title('Comparison of sepal length against sepal width',fontsize=15)              # adjusting font size
+
+# shows title, with font adjustment
+plt.title('Comparison of sepal length against sepal width',fontsize=15)
 plt.show()
 
-
-df = pd.read_csv("Iris.csv")
-sns.set(style = 'whitegrid')                                                         # color of the background grid
-sns.scatterplot(x = 'Petal_length', y = 'Petal_width', data = df,hue = 'Species')
-plt.title('Comparison of petal length against petal width',fontsize=15)              # adjusting font size
-plt.show()
-
-df = pd.read_csv("Iris.csv")
-sns.set(style = 'whitegrid')                                                         # color of the background grid
-sns.scatterplot(x = 'Sepal_length', y = 'Petal_length', data = df,hue = 'Species')
-plt.title('Comparison of sepal length against petal length',fontsize=15)             # adjusting font size
-plt.show()
-
-df = pd.read_csv("Iris.csv")
-sns.set(style = 'whitegrid')                                                         # color of the background grid
-sns.scatterplot(x = 'Sepal_length', y = 'Petal_width', data = df,hue = 'Species')
-plt.title('Comparison of sepal length against petal width',fontsize=15)              # adjusting font size
-plt.show()
-
-df = pd.read_csv("Iris.csv")
-sns.set(style = 'whitegrid')                                                         # color of the background grid
-sns.scatterplot(x = 'Sepal_width', y = 'Petal_length', data = df,hue = 'Species')
-plt.title('Comparison of sepal width against petal length',fontsize=15)              # adjusting font size
-plt.show()
-
-df = pd.read_csv("Iris.csv")
-sns.set(style = 'whitegrid')                                                         # color of the background grid
-sns.scatterplot(x = 'Sepal_width', y = 'Petal_width', data = df,hue = 'Species')
-plt.title('Comparison of sepal width against Petal width',fontsize=15)               # adjusting font size
-plt.show()
-
-Pairplot
-
+PAIRPLOT
+#Shows all scatterplots and histograms on one line
+reference - (https://web.microsoftstream.com/video/025ef713-d7c8-492f-97f4-5590015da029?referrer=https:%2F%2Flearnonline.gmit.ie%2Fcourse%2Fview.php%3Fid%3D1598)
 sns.pairplot(df, hue  ='Species')
 plt.show()
