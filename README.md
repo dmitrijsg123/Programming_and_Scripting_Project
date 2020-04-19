@@ -19,7 +19,9 @@ The Iris Dataset is saved into a CSV file (Comma Separated Value file).
 The following Python libraries are essential and are to be imported to be able to make the necessary program run (https://web.microsoftstream.com/video/025ef713-d7c8-492f-97f4-5590015da029?referrer=https:%2F%2Flearnonline.gmit.ie%2Fcourse%2Fview.php%3Fid%3D1598):
 
 Pandas 
+
 Matplotlib
+
 Seaborn
 
 
