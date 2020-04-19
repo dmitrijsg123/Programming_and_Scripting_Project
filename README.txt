@@ -20,6 +20,7 @@ The following Python libraries are essential and are to be imported to be able t
 Pandas 
 Matplotlib
 Seaborn
+Numpy
 
 
 Pandas is an open-source Python Library providing high-performance data manipulation and analysis tool using its powerful data structures. The name Pandas is derived from the word Panel Data – an Econometrics from Multidimensional data.
@@ -170,38 +171,38 @@ import numpy as np
 df = pd.read_csv("Iris.csv")
 sns.set(style = 'whitegrid')                                                         # color of the background grid
 sns.scatterplot(x = 'Sepal_length', y = 'Sepal_width', data = df,hue = 'Species')
-plt.title('Comparison of sepal length against sepal width')
+plt.title('Comparison of sepal length against sepal width',fontsize=15)              # adjusting font size
 plt.show()
 
 
 df = pd.read_csv("Iris.csv")
 sns.set(style = 'whitegrid')                                                         # color of the background grid
 sns.scatterplot(x = 'Petal_length', y = 'Petal_width', data = df,hue = 'Species')
-plt.title('Comparison of petal length against petal width')
+plt.title('Comparison of petal length against petal width',fontsize=15)              # adjusting font size
 plt.show()
 
 df = pd.read_csv("Iris.csv")
 sns.set(style = 'whitegrid')                                                         # color of the background grid
 sns.scatterplot(x = 'Sepal_length', y = 'Petal_length', data = df,hue = 'Species')
-plt.title('Comparison of sepal length against petal length')
+plt.title('Comparison of sepal length against petal length',fontsize=15)             # adjusting font size
 plt.show()
 
 df = pd.read_csv("Iris.csv")
 sns.set(style = 'whitegrid')                                                         # color of the background grid
 sns.scatterplot(x = 'Sepal_length', y = 'Petal_width', data = df,hue = 'Species')
-plt.title('Comparison of sepal length against petal width')
+plt.title('Comparison of sepal length against petal width',fontsize=15)              # adjusting font size
 plt.show()
 
 df = pd.read_csv("Iris.csv")
 sns.set(style = 'whitegrid')                                                         # color of the background grid
 sns.scatterplot(x = 'Sepal_width', y = 'Petal_length', data = df,hue = 'Species')
-plt.title('Comparison of sepal width against petal length')
+plt.title('Comparison of sepal width against petal length',fontsize=15)              # adjusting font size
 plt.show()
 
 df = pd.read_csv("Iris.csv")
 sns.set(style = 'whitegrid')                                                         # color of the background grid
 sns.scatterplot(x = 'Sepal_width', y = 'Petal_width', data = df,hue = 'Species')
-plt.title('Comparison of sepal width against Petal width')
+plt.title('Comparison of sepal width against Petal width',fontsize=15)               # adjusting font size
 plt.show()
 
 Pairplot
