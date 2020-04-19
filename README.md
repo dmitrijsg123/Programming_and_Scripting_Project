@@ -127,6 +127,11 @@ sns.scatterplot(x = 'Sepal_length', y = 'Sepal_width', data = df,hue = 'Species'
 plt.title('Comparison of sepal length against sepal width',fontsize=15)
 plt.show()
 
+# title color adjustment
+reference https://stackoverflow.com/questions/30109465/matplotlib-set-title-color-in-stylesheet
+plt.title('Comparison of sepal length against sepal width',fontsize=15,color='red')             
+plt.show()
+
 PAIRPLOT
 #Shows all scatterplots and histograms on one line
 reference - (https://web.microsoftstream.com/video/025ef713-d7c8-492f-97f4-5590015da029?referrer=https:%2F%2Flearnonline.gmit.ie%2Fcourse%2Fview.php%3Fid%3D1598)
