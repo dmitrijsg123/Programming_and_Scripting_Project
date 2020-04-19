@@ -123,13 +123,13 @@ sns.set(style = 'whitegrid')
 # Shows scatterplot
 sns.scatterplot(x = 'Sepal_length', y = 'Sepal_width', data = df,hue = 'Species')
 
-# shows title, with font adjustment
-plt.title('Comparison of sepal length against sepal width',fontsize=15)
+# shows title, with font size, weight, colour and style adjustment
+plt.title('Comparison of sepal length against sepal width',fontsize=15, fontweight='bold',color='red',fontstyle='italic') 
 plt.show()
-
-# title color adjustment
 reference https://stackoverflow.com/questions/30109465/matplotlib-set-title-color-in-stylesheet
-plt.title('Comparison of sepal length against sepal width',fontsize=15,color='red')             
+
+# legend re-positioning
+plt.legend(loc='lower right')                                                                             
 plt.show()
 
 PAIRPLOT
