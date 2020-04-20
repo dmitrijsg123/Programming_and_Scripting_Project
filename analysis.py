@@ -121,49 +121,58 @@ print(round(Virginica_average.mean(),2), file=open(output_textfile,"a"))
 
 
 # SCATTERPLOTS
-# References https://www.youtube.com/watch?v=GcXcSZ0gQps, https://web.microsoftstream.com/video/025ef713-d7c8-492f-97f4-5590015da029?referrer=https:%2F%2Flearnonline.gmit.ie%2Fcourse%2Fview.php%3Fid%3D1598
+# References https://www.youtube.com/watch?v=GcXcSZ0gQps
+# https://matplotlib.org/3.1.1/tutorials/text/text_intro.html
+# https://web.microsoftstream.com/video/025ef713-d7c8-492f-97f4-5590015da029?referrer=https:%2F%2Flearnonline.gmit.ie%2Fcourse%2Fview.php%3Fid%3D1598
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 
 df = pd.read_csv("Iris.csv")
-sns.set(style = 'whitegrid')                                                         # color of the background grid
-sns.scatterplot(x = 'Sepal_length', y = 'Sepal_width', data = df,hue = 'Species')
-plt.title('Comparison of sepal length against sepal width')
+sns.set(style = 'whitegrid')                                                         # colour of the background grid
+sns.set_palette(None)                                                                # option of changing colour palette (default one left here)
+sns.scatterplot(x = 'Sepal_length',y = 'Sepal_width', data = df,hue = 'Species')
+plt.title('Comparison of sepal length against sepal width',fontsize=15, fontweight='bold',color='red',fontstyle='italic')              # option of adjusting font size, weight, colour and style
+plt.legend(loc='lower right')                                                                                                          # legend positioning
 plt.show()
 
 
 df = pd.read_csv("Iris.csv")
-sns.set(style = 'whitegrid')                                                         # color of the background grid
+sns.set(style = 'whitegrid')                                                       
 sns.scatterplot(x = 'Petal_length', y = 'Petal_width', data = df,hue = 'Species')
-plt.title('Comparison of petal length against petal width')
+plt.title('Comparison of petal length against petal width',fontsize=15, fontweight='bold',color='red',fontstyle='italic') 
+plt.legend(loc='lower right')
 plt.show()
 
 df = pd.read_csv("Iris.csv")
-sns.set(style = 'whitegrid')                                                         # color of the background grid
+sns.set(style = 'whitegrid')                                                      
 sns.scatterplot(x = 'Sepal_length', y = 'Petal_length', data = df,hue = 'Species')
-plt.title('Comparison of sepal length against petal length')
+plt.title('Comparison of sepal length against petal length',fontsize=15, fontweight='bold',color='red',fontstyle='italic')  
+plt.legend(loc='lower right')
 plt.show()
 
 df = pd.read_csv("Iris.csv")
-sns.set(style = 'whitegrid')                                                         # color of the background grid
+sns.set(style = 'whitegrid')                                                        
 sns.scatterplot(x = 'Sepal_length', y = 'Petal_width', data = df,hue = 'Species')
-plt.title('Comparison of sepal length against petal width')
+plt.title('Comparison of sepal length against petal width',fontsize=15, fontweight='bold',color='red',fontstyle='italic')  
+plt.legend(loc='lower right')
 plt.show()
 
 df = pd.read_csv("Iris.csv")
-sns.set(style = 'whitegrid')                                                         # color of the background grid
+sns.set(style = 'whitegrid')                                                    
 sns.scatterplot(x = 'Sepal_width', y = 'Petal_length', data = df,hue = 'Species')
-plt.title('Comparison of sepal width against petal length')
+plt.title('Comparison of sepal width against petal length',fontsize=15, fontweight='bold',color='red',fontstyle='italic')  
+plt.legend(loc='upper right')
 plt.show()
 
 df = pd.read_csv("Iris.csv")
-sns.set(style = 'whitegrid')                                                         # color of the background grid
+sns.set(style = 'whitegrid')                                                       
 sns.scatterplot(x = 'Sepal_width', y = 'Petal_width', data = df,hue = 'Species')
-plt.title('Comparison of sepal width against Petal width')
+plt.title('Comparison of sepal width against petal width',fontsize=15, fontweight='bold',color='red',fontstyle='italic') 
+plt.legend(loc='upper right')              
 plt.show()
 
-sns.pairplot(df, hue  ='Species')
+sns.pairplot(df, hue='Species')
 plt.show()
 
