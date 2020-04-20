@@ -118,7 +118,10 @@ Scatterplot
 # References https://www.youtube.com/watch?v=GcXcSZ0gQps, https://web.microsoftstream.com/video/025ef713-d7c8-492f-97f4-5590015da029?referrer=https:%2F%2Flearnonline.gmit.ie%2Fcourse%2Fview.php%3Fid%3D1598
 
 # color of the background grid
-sns.set(style = 'whitegrid')                                                        
+sns.set(style = 'whitegrid')   
+
+# option of changing colour palette (default one left here)
+sns.set_palette(None)                                                                
 
 # Shows scatterplot
 sns.scatterplot(x = 'Sepal_length', y = 'Sepal_width', data = df,hue = 'Species')
